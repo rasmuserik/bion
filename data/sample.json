@@ -1,0 +1,14 @@
+{
+  "nil": null,
+  "str": "hello world",
+  "num": 1234,
+  "float": 1234.56,
+  "neg": -1234,
+  "True": true,
+  "False": false,
+  "utf8": "hellø world ∆",
+  "array": [ 1, 2, 3 ],
+  "object": { "hello": 123, "world": true },
+  "repeat": [ { "hello": 123 }, { "hello": 123 } ]
+}
+

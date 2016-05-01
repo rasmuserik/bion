@@ -1,0 +1,18 @@
+{
+  "name": "bion",
+  "version": "0.0.1",
+  "main": "bion.js",
+  "description": "BION - BInary Object Notation - traversable order preserving encoding and decoding. JSON / msgpack / bson alternative",
+  "homepage": "https://github.com/solsort/bion",
+  "bugs": "https://github.com/solsort/bion/issues",
+  "license" : "MIT",
+  "author": "solsort.com",
+  "repository": "solsort/bion",
+  "scripts": {
+    "test": "node bench.js"
+  },
+  "devDependencies": {
+    "bson": "^0.4.23",
+    "msgpack-js": "^0.3.0"
+  }
+}
