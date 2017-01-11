@@ -1,6 +1,9 @@
-[![Build Status](https://travis-ci.org/solsort/bion.svg?branch=master)](https://travis-ci.org/solsort/bion)
+[![website](https://img.shields.io/badge/website-bion.solsort.com-blue.svg)](https://bion.solsort.com/)
+[![github](https://img.shields.io/badge/github-solsort/bion-blue.svg)](https://github.com/solsort/bion)
+[![travis](https://img.shields.io/travis/solsort/bion.svg)](https://travis-ci.org/solsort/bion)
+[![npm](https://img.shields.io/npm/v/bion.svg)](https://www.npmjs.com/package/bion)
 
-# Binary Object Notation <img src="./icon.jpg" height=32>
+# Binary Object Notation <img src="https://bion.solsort.com/icon.png" height=32>
 
 BION is a data encoding, similar to JSON, BSON, MessagePack, etc. It has the following features:
 
