@@ -4,16 +4,21 @@ var data, n;
 var simple = process.env.SIMPLEBENCH;
 
 var bion = require('./bion');
+var bion2 = require('./bion2');
 
 implementations = {
+  bion: {
+    encode: function(o) { return bion.encode(o); },
+    decode: function(o) { return bion.decode(o); }
+  },
+  bion2: {
+    encode: function(o) { return bion2.encode(o); },
+    decode: function(o) { return bion2.decode(o); }
+  },
   json: {
     encode: function(o) { return JSON.stringify(o); },
     decode: function(o) { return JSON.parse(o); }
   }, 
-  bion: {
-    encode: function(o) { return bion.encode(o); },
-    decode: function(o) { return bion.decode(o); }
-  }
 }
 if(!fast) {
   var msgpack = require('msgpack-js');
@@ -41,8 +46,8 @@ function bench(implementation, dataname) {
   var ok = (JSON.stringify(dataset) === JSON.stringify(decoded));
   if(!ok) {
     console.log(JSON.stringify(dataset).slice(0, 1000));
-    console.log(JSON.stringify(decoded).slice(0, 1000));
-    console.log(JSON.stringify(encoded));
+    console.log(String(JSON.stringify(decoded)).slice(0, 1000));
+    console.log(encoded instanceof Uint8Array ? Array.prototype.slice.call(encoded, 0, 20) : JSON.stringify(encoded));
     throw JSON.stringify({error: 'not-equal', data: dataname, impl: implementation});
   }
   var result = [encodeTime, decodeTime, encoded.length];
@@ -51,7 +56,7 @@ function bench(implementation, dataname) {
 }
 
 data = require('./data/sample.json');
-n = 100000 * k;
+n = k === 1 ? k : 100000 * k;
 
 for(var implementation in implementations) {
   for(var dataname in data) {

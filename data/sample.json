@@ -8,6 +8,7 @@
   "False": false,
   "utf8": "hellø world ∆",
   "array": [ 1, 2, 3 ],
+  "bigobj": { "a": 123, "b": true, "c": 32, "d": 123, "e": 898 },
   "object": { "hello": 123, "world": true },
   "repeat": [ { "hello": 123 }, { "hello": 123 } ]
 }
