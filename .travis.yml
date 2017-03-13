@@ -1,1 +1,10 @@
 language: node_js
+node_js:
+- node
+deploy:
+  provider: npm
+  email: npmjs@solsort.com
+  api_key:
+    secure: nUExrCp5GV7qnDn6zfTnz10vVE8DyMuykXE60pIxpzpvQE3y2ThgchMr+YPMBAntxWtnYl5zjv65dYX5cM4pBXDMSKsoA/56w1+p791B+nnxRy6zyDWNTzd88IyYrXc9hjfSjFcvBj/k1huUGeh91MHJmtIF1tUMCLlruKCwu/aTFBE38xTKhOR8XfHK7DrHXeqlRtah1TVxZWTEQnxCeEkihESPhEZt3kkWVrSaZfQM4NKbhTy5fNFTh3MTW3JfHOqu718CR2byzdINcLZ/IajESuLC4hHz/zPaIN2B0x5TSQFmEJloBxKV5Rt6n/TyV5fwE6imfrO4grNCtNGwgKsoF9YuyH/+fZJoVVNtkbiQCwUI3ACJiGZhCCm6IvVsbODD+1ls6aJhdEl8eSh3z3ELcUhnQUrd2/fnk/R3vcMsyxYRMHowGSR/BtBJRbwbVpxbnLHDmjdBeLn/V8yfEDaUH2/L8Lf6+Gbl+A6kI/1qGOOVvH2IhNU84xJm4QmKnG1X0t2FdrX0yupggtEgPXoKZWw7crnnu+nd6CchbJ1i8k6BW00f2W7rGTeFR9jGnbiouHuzaQUv63+F9jtgt0OZgtvDOiBJw5F4hR8XEozrdxzsp6oFqgjuqkY+6YdlgT7s0L7EBC5l2JKxPkFp2LSdwWa+fzhWaYB/TuYnKB0=
+  on:
+    repo: solsort/bion

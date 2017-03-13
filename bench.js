@@ -3,13 +3,13 @@ var k = fast ? 1 : 10;
 var data, n;
 var simple = process.env.SIMPLEBENCH;
 
-var bion = require('./bion');
+var bion1 = require('./bion1');
 var bion2 = require('./bion2');
 
 implementations = {
-  bion: {
-    encode: function(o) { return bion.encode(o); },
-    decode: function(o) { return bion.decode(o); }
+  bion1: {
+    encode: function(o) { return bion1.encode(o); },
+    decode: function(o) { return bion1.decode(o); }
   },
   bion2: {
     encode: function(o) { return bion2.encode(o); },
