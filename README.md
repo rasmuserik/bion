@@ -9,6 +9,9 @@ BION is compact traversable serialisation of JSON to binary data. Similar to BSO
 
 It is designed to be
 
+- **Traversable.** The data structure can be traversed without unpacking/parsing the entire data structure.
+- **Compact.** The encoded format is optimised for size.
+
 There are several versions:
 
 - version 0.2 Support for **Uint8Array** in addition to standard JSON types. Returns Uint8Array instead of 8-bit string. Format is designed to be able to support fast traversal of large data later on (B+-tree-like index for objects, and direct lookup of index for arrays).
