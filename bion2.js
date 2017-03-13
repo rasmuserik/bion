@@ -218,9 +218,15 @@ function decode(buf, pos) {
   }
 }
 // # exports
-exports.encode = (o) => {
+var bion;
+if(typeof exports === 'object') {
+  bion = exports;
+} else {
+  bion = self.Bion = {};
+}
+bion.encode = (o) => {
   pos = 0;
   encode(o);
   return buf.slice(0, pos);
 }
-exports.decode = (o) => decode(o, 0)[0];
+bion.decode = (o) => decode(o, 0)[0];
