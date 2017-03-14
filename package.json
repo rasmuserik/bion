@@ -1,6 +1,6 @@
 {
   "name": "bion",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "bion.js",
   "description": "BION - BInary Object Notation - traversable order preserving encoding and decoding. JSON / msgpack / bson alternative",
   "homepage": "https://github.com/solsort/bion",
