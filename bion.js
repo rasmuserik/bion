@@ -161,6 +161,14 @@ function encode(o) {
     for(var i = 0; i < o.length; ++i) {
       encode(o[i]);
     }
+    return;
+  }
+  if(o.constructor === Uint8Array) {
+    writeHeader(0x60, o.length);
+    for(var i = 0; i < o.length; ++i) {
+      addByte(o[i]);
+    }
+    return;
   }
 }
 // # decode
@@ -191,7 +199,7 @@ function decode(buf, pos) {
     case 2: // ## String
         return readStr(buf, pos, pos+num);
     case 3: // ## Binary
-      return ['TODO', pos];
+      return [buf.slice(pos, pos + num), pos];
     case 4: case 5: // ## Streamable collections
       if(num === 0) {
         throw 'Streamed collections not implemented yet.';
